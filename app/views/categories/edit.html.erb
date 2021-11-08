@@ -1,0 +1,24 @@
+<h1>Edit Category</h1>
+
+<%= form_with model: @category do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %><br>
+    <%= form.label :is_visible %><br>
+    <%= form.text_field :is_visible %><br>
+    <%= form.label :position %><br>
+    <%= form.text_field :position %><br>
+
+    <% @category.errors.full_messages_for(:name).each do |message| %>
+        <div><%= message %></div>
+    <% end %>  
+
+    <% @category.errors.full_messages_for(:position).each do |message| %>
+        <div><%= message %></div>
+    <% end %>  
+    
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
