@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   root "categories#index"
 
   resources :categories do
@@ -6,8 +7,7 @@ Rails.application.routes.draw do
     collection do 
       get :sorting
       get :clear_sorting
-      get :sorting_prod
-      get :clear_sorting_prod
+      get :send_email
     end
   end
 

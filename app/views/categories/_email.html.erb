@@ -1,0 +1,5 @@
+<%= form_with (:action => 'send_email', :param => 'email_form.email_field' ) do |email_form| %>
+    <%= email_form.label :address, "Введите ваш email:" %><br>
+    <%= email_form.email_field :address %>
+    <%= email_form.submit "Отправить" %>
+  <% end %>
