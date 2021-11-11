@@ -5,7 +5,8 @@ class ProductMailer < ApplicationMailer
   #
   #   en.product_mailer.welcome_email.subject
   #
-  def welcome_email
-    mail(to: email, subject: 'Welcome to My Awesome Site')
+  def welcome_email(email)
+    @mail = email
+    mail(to: @mail, subject: 'Welcome to My Awesome Site')
   end
 end
