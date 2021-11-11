@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     collection do 
       get :sorting
       get :clear_sorting
-      get :send_email
+      post :send_email
     end
   end
 

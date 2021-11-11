@@ -33,7 +33,8 @@ class CategoriesController < ApplicationController
     end
 
     def send_email
-        ProductMailer.welcome_email.deliver_now
+        @email = params[:address]
+        ProductMailer.welcome_email(@email).deliver_now
     end
     
 

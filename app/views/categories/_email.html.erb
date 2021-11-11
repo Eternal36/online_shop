@@ -1,5 +1,5 @@
-<%= form_with method: :get do |email_form| %>
-    <%= email_form.label :address, "Введите ваш email:" %><br>
-    <%= email_form.email_field :address %>
-    <%= email_form.submit "Отправить" %>
+<%= form_tag send_email_categories_path do %>
+    <label for="address">Введите ваш email</label>
+    <%= text_field_tag :address %>
+    <%= submit_tag "Отправить" %>
   <% end %>

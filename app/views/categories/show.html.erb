@@ -4,10 +4,9 @@
 <%= link_to "Edit", edit_category_path(@category) %>
 
 <%= render @products %>
-<%= link_to 'Узнать подробнее', onclick: 'showForm();' %>
-
+<%= link_to 'Узнать подробнее', '#', remote: true, onclick: 'showForm(event);'%>
 <!-- form -->
-<div style="display: none;" id="email_form">
+<div id="email_form" style="display: none">
   <%= render 'email' %>
 </div>
 
@@ -15,7 +14,8 @@
 <%= link_to 'Очистить сортировку', clear_sorting_categories_path(category_id: @category.id) %>
 
 <script>
-function showForm() {
-  document.getElementById("email_form").style.display = "block";
+function showForm(event) {
+    event.preventDefault();
+    document.getElementById("email_form").style.display = "block";
 }
 </script>
