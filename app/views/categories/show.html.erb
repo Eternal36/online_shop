@@ -7,7 +7,7 @@
 <%= link_to 'Узнать подробнее', onclick: 'showForm();' %>
 
 <!-- form -->
-<div style="display: none;">
+<div style="display: none;" id="email_form">
   <%= render 'email' %>
 </div>
 
@@ -16,6 +16,6 @@
 
 <script>
 function showForm() {
-  document.getElementById("id").style.display = "block";
+  document.getElementById("email_form").style.display = "block";
 }
 </script>
