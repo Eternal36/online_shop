@@ -38,6 +38,12 @@ class CategoriesController < ApplicationController
     end
     
 
+    def new_email
+        respond_to do |format| 
+            format.html 
+            format.js 
+        end 
+    end
 
     private
         def category_params

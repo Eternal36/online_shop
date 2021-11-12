@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       get :sorting
       get :clear_sorting
       post :send_email
+      get :new_email
+
     end
   end
 

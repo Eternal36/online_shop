@@ -4,18 +4,14 @@
 <%= link_to "Edit", edit_category_path(@category) %>
 
 <%= render @products %>
-<%= link_to 'Узнать подробнее', '#', remote: true, onclick: 'showForm(event);'%>
-<!-- form -->
-<div id="email_form" style="display: none">
-  <%= render 'email' %>
+
+<%= link_to 'Узнать подробнее', new_email_categories_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"></div>
+  </div>
 </div>
 
 <%= link_to 'Сортировать', sorting_categories_path(category_id: @category.id) %>
 <%= link_to 'Очистить сортировку', clear_sorting_categories_path(category_id: @category.id) %>
-
-<script>
-function showForm(event) {
-    event.preventDefault();
-    document.getElementById("email_form").style.display = "block";
-}
-</script>
