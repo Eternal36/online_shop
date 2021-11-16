@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_11_16_072921) do
   end
 
   create_table "articles", force: :cascade do |t|
-    t.integer "product_id"
+    t.integer "product_id", null: false
     t.integer "number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -65,5 +65,6 @@ ActiveRecord::Schema.define(version: 2021_11_16_072921) do
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
+  add_foreign_key "articles", "products"
   add_foreign_key "products", "categories"
 end
