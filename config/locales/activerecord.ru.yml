@@ -1,0 +1,73 @@
+ru:
+  activerecord:
+    models:
+      category: 'Категория'
+      product: 'Товар'
+    attributes:
+      category:
+        name: 'Наименование'
+        is_visible: 'Видимость'
+        position: 'Позиция'
+      product:
+        name: 'Наименование'
+        position: 'Позиция'
+        category: 'Категория'
+        price: 'Цена'
+
+  errors:
+    messages:
+      blank: 'не может быть пустым'
+      inclusion: 'число должно входить в диапозон от 1 до 1000'
+  date:
+    abbr_day_names:
+    - Вс
+    - Пн
+    - Вт
+    - Ср
+    - Чт
+    - Пт
+    - Сб
+    abbr_month_names:
+    - 
+    - янв.
+    - февр.
+    - марта
+    - апр.
+    - мая
+    - июня
+    - июля
+    - авг.
+    - сент.
+    - окт.
+    - нояб.
+    - дек.
+    day_names:
+    - воскресенье
+    - понедельник
+    - вторник
+    - среда
+    - четверг
+    - пятница
+    - суббота
+    formats:
+      default: "%d.%m.%Y"
+      long: "%-d %B %Y"
+      short: "%-d %b"
+    month_names:
+    - 
+    - января
+    - февраля
+    - марта
+    - апреля
+    - мая
+    - июня
+    - июля
+    - августа
+    - сентября
+    - октября
+    - ноября
+    - декабря
+    order:
+    - :day
+    - :month
+    - :year

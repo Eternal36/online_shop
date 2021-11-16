@@ -11,3 +11,4 @@
 #category = Category.create(title:"Аксессуары", is_visible:1, position:5)
 product = Product.create(name:"Худи", category_id:1, is_visible:0, position:127, price:7.55)
 
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

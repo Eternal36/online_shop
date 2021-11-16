@@ -1,11 +1,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
 <h1><%= @category.name %></h1>
-<%= link_to "Edit", edit_category_path(@category) %>
+<%= link_to t('common.edit'), edit_category_path(@category) %>
 
 <%= render @products %>
 
-<%= link_to 'Узнать подробнее', new_email_categories_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+<%= link_to t('common.more_details'), new_email_categories_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
 
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -13,5 +13,5 @@
   </div>
 </div>
 
-<%= link_to 'Сортировать', sorting_categories_path(category_id: @category.id) %>
-<%= link_to 'Очистить сортировку', clear_sorting_categories_path(category_id: @category.id) %>
+<%= link_to t('common.sort'), sorting_categories_path(category_id: @category.id) %>
+<%= link_to t('common.not_sort'), clear_sorting_categories_path(category_id: @category.id) %>

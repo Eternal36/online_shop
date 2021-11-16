@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :users
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   root "categories#index"
 
   resources :categories do
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
       get :clear_sorting
       post :send_email
       get :new_email
+      get :localiz
 
     end
   end

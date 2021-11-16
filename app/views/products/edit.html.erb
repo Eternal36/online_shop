@@ -1,4 +1,4 @@
-<h1>Edit Product</h1>
+<h1><%= t('products.edit.name') %></h1>
 
 <%= form_with model: [@category, @product] do |form| %>
   <div>
@@ -10,18 +10,21 @@
     <%= form.text_field :position %><br>
     <%= form.label :price %><br>
     <%= form.text_field :price %><br>
+    <%= form.label :article %><br>
+    <%= form.text_field :article %><br>
 
     <% @product.errors.full_messages_for(:name).each do |message| %>
-        <div><%= message %></div>
+        <div><%= t(message) %></div>
     <% end %>  
     <% @product.errors.full_messages_for(:price).each do |message| %>
-        <div><%= message %></div>
+        <div><%= t(message) %></div>
     <% end %> 
     <% @product.errors.full_messages_for(:position).each do |message| %>
-        <div><%= message %></div>
+        <div><%= t(message) %></div>
     <% end %> 
   </div>
   <div>
-    <%= form.submit %>
+    <%= link_to t('common.back'), :back %>
+    <%= form.submit t('products.edit.form.submit') %>
   </div>
 <% end %>

@@ -1,0 +1,21 @@
+en:
+  activerecord:
+    models:
+      category: 'Category'
+      product: 'Product'
+    attributes:
+      category:
+        name: 'Name'
+        is_visible: 'Visible'
+        position: 'Position'
+      product:
+        name: 'Name'
+        position: 'Position'
+        category: 'Category'
+        price: 'Price'
+
+  errors:
+    messages:
+      blank: 'cannot be empty'
+      inclusion: 'the number must be in the range from 1 to 1000'
+      

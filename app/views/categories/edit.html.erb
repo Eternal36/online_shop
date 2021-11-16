@@ -1,4 +1,4 @@
-<h1>Edit Category</h1>
+<h1><%= I18n.t('categories.edit.name') %></h1>
 
 <%= form_with model: @category do |form| %>
   <div>
@@ -10,15 +10,16 @@
     <%= form.text_field :position %><br>
 
     <% @category.errors.full_messages_for(:name).each do |message| %>
-        <div><%= message %></div>
+        <div><%= t(message) %></div>
     <% end %>  
 
     <% @category.errors.full_messages_for(:position).each do |message| %>
-        <div><%= message %></div>
+        <div><%= t(message) %></div>
     <% end %>  
     
   </div>
   <div>
-    <%= form.submit %>
+    <%= link_to t('common.back'), :back %>
+    <%= form.submit t('categories.edit.form.submit') %>
   </div>
 <% end %>

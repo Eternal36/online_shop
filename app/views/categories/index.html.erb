@@ -1,8 +1,14 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<br>
 
-<h1>Категории</h1>
+
+<%= link_to 'En', root_path(locale: :en) %>
+<%= link_to 'Рус', root_path(locale: :ru) %>
+
+
+
+<h1><%= t('categories.index.title') %></h1>
 
 <%= render @category %>
 
-<%= link_to 'Сортировать', sorting_categories_path %>
-<%= link_to 'Очистить сортировку', clear_sorting_categories_path %>
+<%= link_to t('common.sort'), sorting_categories_path %>
+<%= link_to t('common.not_sort'), clear_sorting_categories_path %>

@@ -1,9 +1,9 @@
 <div class="modal-body">
 <p>
 <%= form_tag send_email_categories_path, remote: true do %>
-    <label for="address">Введите ваш email</label>
+    <label for="address"><%= t('categories.form_email.input_email')%></label>
     <%= text_field_tag :address %>
-    <%= submit_tag "Отправить" %>
+    <%= submit_tag t('categories.form_email.send') %>
   <% end %>
 </p>
 </div>

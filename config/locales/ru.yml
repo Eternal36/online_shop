@@ -1,0 +1,23 @@
+ru:
+  common:
+    back: 'Назад'
+    sort: 'Сортировать'
+    not_sort: 'Очистить сортировку'
+    more_details: 'Узнать подробнее1'
+    edit: 'Редактировать'
+  categories:
+    index:
+      title: 'Категории1'
+    edit:
+      name: 'Редактирование категории'
+      form:
+        submit: 'Изменить категорию'
+    form_email:
+      input_email: 'Введите Ваш email'
+      send: 'отправить'
+  products:
+    edit: 
+      name: 'Редактирование товара'
+      form:
+        submit: 'Изменить товар'
+  
